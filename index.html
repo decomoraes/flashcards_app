@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flashcards</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+        <!-- Meta tags específicas para iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Leptos Counter">
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+    <link rel="modulepreload" href="/flashcards/leptos_app-83ef4201fa97b4c2.js" crossorigin="anonymous" integrity="sha384-R7q7l058cYWE9i5L2ejJxQvT2seZ1+OadL90dxcwFkHFWLv8f+gusf6ghpqjRPz5"><link rel="preload" href="/flashcards/leptos_app-83ef4201fa97b4c2_bg.wasm" crossorigin="anonymous" integrity="sha384-fywlOYvTyGe94+uYZ7egR0H0gfrqImuBOYprJkqwiPksKx03EB21isxZ3i/RflsO" as="fetch" type="application/wasm"></head>
+    </head>
+    <body>
+<script type="module">
+import init, * as bindings from '/flashcards/leptos_app-83ef4201fa97b4c2.js';
+const wasm = await init({ module_or_path: '/flashcards/leptos_app-83ef4201fa97b4c2_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
