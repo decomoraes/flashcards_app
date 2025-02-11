@@ -26,15 +26,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
-        <!-- <script>
-            // A cada 2000ms (2 segundos), executa o hljs.highlightAll()
-            setInterval(function () {
-                hljs.highlightAll();
-            }, 2000);
-        </script> -->
+
         <style>
             body {
                 padding-top: env(safe-area-inset-top);
@@ -43,17 +35,25 @@
                 padding-right: env(safe-area-inset-right);
             }
         </style>
-    <link rel="modulepreload" href="/flashcards/leptos_app-27fdd92c5ef0d25f.js" crossorigin="anonymous" integrity="sha384-xj5EOnWSjx8n465S2TfeUY/xRlBP/mDw6VmO+yQd9NtJ9SmKn9dnFT7v8en5bUXP"><link rel="preload" href="/flashcards/leptos_app-27fdd92c5ef0d25f_bg.wasm" crossorigin="anonymous" integrity="sha384-acnGbgBIKmjrqTN9IxDZYUCYhuwy+YCdvJYrxF9ahtNMkBxkdJUr4Jmq1pevQB4t" as="fetch" type="application/wasm"></head>
+
+        <link rel="modulepreload" href="/flashcards/leptos_app-27fdd92c5ef0d25f.js" crossorigin="anonymous" integrity="sha384-xj5EOnWSjx8n465S2TfeUY/xRlBP/mDw6VmO+yQd9NtJ9SmKn9dnFT7v8en5bUXP">
+        <link rel="preload" href="/flashcards/leptos_app-27fdd92c5ef0d25f_bg.wasm" crossorigin="anonymous" integrity="sha384-acnGbgBIKmjrqTN9IxDZYUCYhuwy+YCdvJYrxF9ahtNMkBxkdJUr4Jmq1pevQB4t" as="fetch" type="application/wasm">
+    </head>
     <body>
-<script type="module">
-import init, * as bindings from '/flashcards/leptos_app-27fdd92c5ef0d25f.js';
-const wasm = await init({ module_or_path: '/flashcards/leptos_app-27fdd92c5ef0d25f_bg.wasm' });
+        <script type="module">
+            import init, * as bindings from '/flashcards/leptos_app-27fdd92c5ef0d25f.js';
+            const wasm = await init({ module_or_path: '/flashcards/leptos_app-27fdd92c5ef0d25f_bg.wasm' });
 
+            window.wasmBindings = bindings;
 
-window.wasmBindings = bindings;
+            dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
-
-dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
-
-</script></body>
+            // Aguarde o carregamento do Leptos e então aplique o Highlight.js
+            setTimeout(() => {
+                document.querySelectorAll('pre code').forEach((el) => {
+                    hljs.highlightElement(el);
+                });
+            }, 500); // Ajuste o tempo se necessário
+        </script>
+    </body>
 </html>
