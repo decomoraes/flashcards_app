@@ -79,18 +79,31 @@
             }, 2000);
         </script> -->
         <style>
+            * {
+                box-sizing: border-box;
+            }
             body {
                 padding-top: env(safe-area-inset-top);
                 padding-bottom: env(safe-area-inset-bottom);
                 padding-left: env(safe-area-inset-left);
                 padding-right: env(safe-area-inset-right);
             }
+            .button_style {
+                width: 100%;
+                padding: 0 1rem;
+                height: 3rem;
+                border-radius: 0.5rem;
+                border: none;
+                background-color: #222;
+                color: white;
+                font-size: 1rem;
+            }
         </style>
-    <link rel="modulepreload" href="/flashcards/leptos_app-a9383d5f49ffb7b.js" crossorigin="anonymous" integrity="sha384-iAbFzYGfEuKfRVqhMgmsUFSQ32nkIj2auRrEYHoTCVA/IFQ1pTn6RbJ6eVFLrtCM"><link rel="preload" href="/flashcards/leptos_app-a9383d5f49ffb7b_bg.wasm" crossorigin="anonymous" integrity="sha384-zmCyQIdhPERb20g0gWf9sxs1T/ktoYZxEpzLHdTqOkAOVmJvrnkrdNC0I8JZ2S05" as="fetch" type="application/wasm"></head>
+    <link rel="modulepreload" href="/flashcards/leptos_app-623d3c171477ca82.js" crossorigin="anonymous" integrity="sha384-DPzMEHT66wdNYQ6REL2IQ5lhAUOj5uSsLCl6S9k8rK5LGwPqR8QimJWHIm/iy7U0"><link rel="preload" href="/flashcards/leptos_app-623d3c171477ca82_bg.wasm" crossorigin="anonymous" integrity="sha384-1MtSCmEpGYB5+lC3xch4tMBw9iUXnGNQF6vz4eWQGOj4Ksr29+N3s4Gdq/f7qxTi" as="fetch" type="application/wasm"></head>
     <body>
 <script type="module">
-import init, * as bindings from '/flashcards/leptos_app-a9383d5f49ffb7b.js';
-const wasm = await init({ module_or_path: '/flashcards/leptos_app-a9383d5f49ffb7b_bg.wasm' });
+import init, * as bindings from '/flashcards/leptos_app-623d3c171477ca82.js';
+const wasm = await init({ module_or_path: '/flashcards/leptos_app-623d3c171477ca82_bg.wasm' });
 
 
 window.wasmBindings = bindings;
