@@ -21,6 +21,9 @@
         />
         <meta name="apple-mobile-web-app-title" content="Flashcards" />
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        
+        
+        <link rel="stylesheet" href="/styles/app.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
@@ -28,7 +31,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
         
         
-        <link rel="stylesheet" href="/flashcards_app/styles/app.css" />
+        <link rel="stylesheet" href="/styles/app.css" />
         <!-- <script>
             hljs.highlightAll();
         </script> -->
@@ -91,16 +94,16 @@
                 padding-right: env(safe-area-inset-right);
             } */
             .safe_area_top {
-                padding-top: env(safe-area-inset-top);
+                padding-top: env(safe-area-inset-top) !important;
             }
             .safe_area_bottom {
-                padding-bottom: env(safe-area-inset-bottom);
+                padding-bottom: env(safe-area-inset-bottom) !important;
             }
             .safe_area_left {
-                padding-left: env(safe-area-inset-left);
+                padding-left: env(safe-area-inset-left) !important;
             }
             .safe_area_right {
-                padding-right: env(safe-area-inset-right);
+                padding-right: env(safe-area-inset-right) !important;
             }
             .button_style {
                 width: 100%;
@@ -117,11 +120,11 @@
                 cursor: pointer;
             }
         </style>
-    <link rel="modulepreload" href="/flashcards_app/flashcards_app-42143b5a55bc84ef.js" crossorigin="anonymous" integrity="sha384-hJFfKrYHdMB9sMD3FtFSK57TP1ybA55DhGnvMT3ND8jXQicXiFVGaV2pYQbPYPCU"><link rel="preload" href="/flashcards_app/flashcards_app-42143b5a55bc84ef_bg.wasm" crossorigin="anonymous" integrity="sha384-BYb2MwxMPaL6COxa8BZmTb3TVxy7vmfP6+DGtx85LyGEK1OV27xQ/mGeC0uHupsj" as="fetch" type="application/wasm"></head>
+    <link rel="modulepreload" href="/flashcards_app/flashcards_app-7953d5a043e611b8.js" crossorigin="anonymous" integrity="sha384-sjxT32C83uQwFrSeCj0EMejWWCvnBZ9GCVP9okvOrXCvZC67mgPegUCf5z4y9mAw"><link rel="preload" href="/flashcards_app/flashcards_app-7953d5a043e611b8_bg.wasm" crossorigin="anonymous" integrity="sha384-eSbL+hwalwA1reSGcgt22TUCcJCq/iodW5kLVH56OhpLaG//3p6jS8TOcre4KgSs" as="fetch" type="application/wasm"></head>
     <body>
 <script type="module">
-import init, * as bindings from '/flashcards_app/flashcards_app-42143b5a55bc84ef.js';
-const wasm = await init({ module_or_path: '/flashcards_app/flashcards_app-42143b5a55bc84ef_bg.wasm' });
+import init, * as bindings from '/flashcards_app/flashcards_app-7953d5a043e611b8.js';
+const wasm = await init({ module_or_path: '/flashcards_app/flashcards_app-7953d5a043e611b8_bg.wasm' });
 
 
 window.wasmBindings = bindings;
