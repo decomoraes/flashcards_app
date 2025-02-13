@@ -26,7 +26,9 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
         />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-
+        
+        
+        <link rel="stylesheet" href="/styles/app.css" />
         <!-- <script>
             hljs.highlightAll();
         </script> -->
@@ -82,10 +84,22 @@
             * {
                 box-sizing: border-box;
             }
-            body {
+            /* body {
                 padding-top: env(safe-area-inset-top);
                 padding-bottom: env(safe-area-inset-bottom);
                 padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
+            } */
+            .safe_area_top {
+                padding-top: env(safe-area-inset-top);
+            }
+            .safe_area_bottom {
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            .safe_area_left {
+                padding-left: env(safe-area-inset-left);
+            }
+            .safe_area_right {
                 padding-right: env(safe-area-inset-right);
             }
             .button_style {
@@ -95,15 +109,19 @@
                 border-radius: 0.5rem;
                 border: none;
                 background-color: #222;
+                background-color: #32cdff;
                 color: white;
                 font-size: 1rem;
             }
+            button {
+                cursor: pointer;
+            }
         </style>
-    <link rel="modulepreload" href="/flashcards_app/leptos_app-623d3c171477ca82.js" crossorigin="anonymous" integrity="sha384-DPzMEHT66wdNYQ6REL2IQ5lhAUOj5uSsLCl6S9k8rK5LGwPqR8QimJWHIm/iy7U0"><link rel="preload" href="/flashcards/leptos_app-623d3c171477ca82_bg.wasm" crossorigin="anonymous" integrity="sha384-1MtSCmEpGYB5+lC3xch4tMBw9iUXnGNQF6vz4eWQGOj4Ksr29+N3s4Gdq/f7qxTi" as="fetch" type="application/wasm"></head>
+    <link rel="modulepreload" href="/flashcards_app/flashcards_app-42143b5a55bc84ef.js" crossorigin="anonymous" integrity="sha384-hJFfKrYHdMB9sMD3FtFSK57TP1ybA55DhGnvMT3ND8jXQicXiFVGaV2pYQbPYPCU"><link rel="preload" href="/flashcards_app/flashcards_app-42143b5a55bc84ef_bg.wasm" crossorigin="anonymous" integrity="sha384-BYb2MwxMPaL6COxa8BZmTb3TVxy7vmfP6+DGtx85LyGEK1OV27xQ/mGeC0uHupsj" as="fetch" type="application/wasm"></head>
     <body>
 <script type="module">
-import init, * as bindings from '/flashcards_app/leptos_app-623d3c171477ca82.js';
-const wasm = await init({ module_or_path: '/flashcards_app/leptos_app-623d3c171477ca82_bg.wasm' });
+import init, * as bindings from '/flashcards_app/flashcards_app-42143b5a55bc84ef.js';
+const wasm = await init({ module_or_path: '/flashcards_app/flashcards_app-42143b5a55bc84ef_bg.wasm' });
 
 
 window.wasmBindings = bindings;
